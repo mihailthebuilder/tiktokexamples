@@ -89,7 +89,7 @@ const posts = (await getCollection("blog")).sort(
                     width={720}
                     height={360}
                     src={post.data.heroImage}
-                    alt=""
+                    alt={post.data.altHeroImage}
                   />
                   <h4
                     class={`${index == 0 ? "md:text-[2rem]" : ""} font-semibold`}

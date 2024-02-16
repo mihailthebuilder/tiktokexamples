@@ -7,7 +7,7 @@ import FormattedDate from "../components/FormattedDate.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, heroImage } = Astro.props;
+const { title, description, pubDate, heroImage, altHeroImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -31,7 +31,7 @@ const { title, description, pubDate, heroImage } = Astro.props;
     <main>
       <article>
         <div class="hero-image">
-          <img width={1020} height={510} src={heroImage} alt="" />
+          <img width={1020} height={510} src={heroImage} alt={altHeroImage} />
         </div>
         <div class="py-5">
           <div class="md:text-center">
