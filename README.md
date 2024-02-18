@@ -8,7 +8,9 @@ I need to add `/blog/` to each image in the `mdx` file. Ideally it should do it 
 
 Getting warnings for nested CSS when I build. They're not affecting anything though.
 
-Got 99% on performance because I'm not serving smaller images for mobile.
+Got 91% performance on the blog post page, mainly because of the EmailOctopus script.
+
+Need to align EmailOctopus newsletter form to the left side.
 
 ## Astro blog starter kit notes
 
