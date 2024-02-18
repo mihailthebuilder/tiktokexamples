@@ -91,11 +91,11 @@ const posts = (await getCollection("blog")).sort(
                     src={post.data.heroImage}
                     alt={post.data.altHeroImage}
                   />
-                  <h4
+                  <h2
                     class={`${index == 0 ? "md:text-[2rem]" : ""} font-semibold`}
                   >
                     {post.data.title}
-                  </h4>
+                  </h2>
                   <p class="date">
                     <FormattedDate date={post.data.pubDate} />
                   </p>
