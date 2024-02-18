@@ -6,6 +6,10 @@ Blog site for educational TikTok content. Built with Astro's blog starter kit.
 
 I need to add `/blog/` to each image in the `mdx` file. Ideally it should do it automatically.
 
+Getting warnings for nested CSS when I build. They're not affecting anything though.
+
+Got 99% on performance because I'm not serving smaller images for mobile.
+
 ## Astro blog starter kit notes
 
 Features:
