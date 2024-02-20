@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tiktokadvice.com/sitemap-index.xml
+Sitemap: https://tiktokexamples.com/sitemap-index.xml
