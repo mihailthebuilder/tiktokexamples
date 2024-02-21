@@ -17,8 +17,8 @@ const { title, description, heroImage, altHeroImage } = Astro.props;
   <body>
     <Header />
     <main class="py-10 md:mx-auto md:flex md:flex-col md:items-center">
-      <article class="px-5">
-        <div class="max-w-md">
+      <article class="px-5 max-w-lg">
+        <div>
           <div>
             <img src={heroImage} alt={altHeroImage} />
           </div>
@@ -35,7 +35,9 @@ const { title, description, heroImage, altHeroImage } = Astro.props;
 
         <slot />
       </article>
-      <section class="max-w-md px-5">
+      <section class="max-w-lg px-5">
+        <hr />
+
         <p class="pt-5">
           Enjoyed this post? Subscribe to the newsletter for updates on new
           content (once a week max).
