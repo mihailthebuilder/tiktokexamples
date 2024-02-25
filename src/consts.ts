@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = "TikTok Examples: case studies for audience growth";
 export const SITE_DESCRIPTION =
-  "Learn from examples of TikTok posts or accounts that went viral. Curated to offer actionable strategies for audience growth that anyone can follow.";
+  "Learn from examples of TikTok posts or accounts that went viral. Curated to offer actionable strategies for audience growth that anyone try out.";
