@@ -86,4 +86,8 @@ hr {
   h2 {
     @apply font-bold text-[1.4rem] md:text-[2rem];
   }
+
+  img {
+    @apply mb-7;
+  }
 }
