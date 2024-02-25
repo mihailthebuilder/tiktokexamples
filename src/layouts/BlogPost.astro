@@ -42,10 +42,15 @@ const { title, description, heroImage, altHeroImage } = Astro.props;
           Enjoyed this post? Subscribe to the newsletter for updates on new
           content (once a week max).
         </p>
-        <script
-          async
-          src="https://eomail6.com/form/05ea1b56-d0ba-11ee-9094-2f97f7a66a9d.js"
-          data-form="05ea1b56-d0ba-11ee-9094-2f97f7a66a9d"></script>
+        {
+          import.meta.env.PROD && (
+            <script
+              async
+              src="https://eomail6.com/form/05ea1b56-d0ba-11ee-9094-2f97f7a66a9d.js"
+              data-form="05ea1b56-d0ba-11ee-9094-2f97f7a66a9d"
+            />
+          )
+        }
       </section>
     </main>
     <Footer />
