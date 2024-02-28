@@ -20,17 +20,6 @@ const { title, description, image } = Astro.props;
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
-<!-- Analytics -->
-{
-  import.meta.env.PROD && (
-    <script
-      async
-      src="https://umami.app.taralys.com/hello"
-      data-website-id="e3ed8059-90a1-4bf8-9dad-8147166d5894"
-    />
-  )
-}
-
 <!-- Font preloads -->
 <link
   rel="preload"
@@ -71,3 +60,20 @@ const { title, description, image } = Astro.props;
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- Newsletter popup -->
+<script
+  async
+  src="https://eomail6.com/form/da20d574-d63f-11ee-ab69-45662228b6b6.js"
+  data-form="da20d574-d63f-11ee-ab69-45662228b6b6"></script>
+
+<!-- Analytics -->
+{
+  import.meta.env.PROD && (
+    <script
+      async
+      src="https://umami.app.taralys.com/hello"
+      data-website-id="e3ed8059-90a1-4bf8-9dad-8147166d5894"
+    />
+  )
+}
