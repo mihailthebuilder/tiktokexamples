@@ -5,7 +5,6 @@
  */
 
 :root {
-  --accent: #2337ff;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
@@ -46,12 +45,6 @@ strong,
 b {
   font-weight: 700;
 }
-a {
-  color: var(--accent);
-}
-a:hover {
-  color: var(--accent);
-}
 p {
   margin-bottom: 1em;
 }
@@ -64,11 +57,6 @@ input {
 }
 table {
   width: 100%;
-}
-code {
-  padding: 2px 5px;
-  background-color: rgb(var(--gray-light));
-  border-radius: 2px;
 }
 pre {
   padding: 1.5em;
