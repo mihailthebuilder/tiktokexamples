@@ -19,20 +19,21 @@ const posts = (await getCollection("blog")).sort(
       image={"/meta.webp"}
     />
   </head>
-  <body>
+  <body class="text-stone-800">
     <Header />
-    <main class="py-10">
-      <section class="md:mx-auto md:flex md:flex-col md:items-center px-5">
-        <ul class="max-w-sm">
+    <main class="pt-5 pb-10">
+      <section class="px-5 md:flex md:flex-col md:items-center">
+        <ul class="max-w-screen-md grid md:grid-cols-2 gap-x-20 gap-y-8">
           {
-            posts.map((post, index) => (
-              <li class={posts.length - 1 == index ? "" : "mb-10"}>
-                <a
-                  class="text-black hover:text-blue-600"
-                  href={`/blog/${post.slug}/`}
-                >
-                  <img src={post.data.heroImage} alt={post.data.altHeroImage} />
-                  <h2 class={"font-semibold leading-none mt-2"}>
+            posts.map((post) => (
+              <li class="hover:underline">
+                <a href={`/blog/${post.slug}/`}>
+                  <img
+                    class="h-60 w-full border-2 border-stone-800 rounded-md"
+                    src={post.data.heroImage}
+                    alt={post.data.altHeroImage}
+                  />
+                  <h2 class={"font-semibold leading-tight mt-2"}>
                     {post.data.title}
                   </h2>
                 </a>

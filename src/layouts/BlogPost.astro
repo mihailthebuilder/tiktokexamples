@@ -14,13 +14,17 @@ const { title, description, heroImage, altHeroImage } = Astro.props;
     <BaseHead title={title} description={description} image={heroImage} />
   </head>
 
-  <body>
+  <body class="text-stone-800">
     <Header />
-    <main class="py-10 md:mx-auto md:flex md:flex-col md:items-center">
+    <main class="pt-5 pb-10 md:mx-auto md:flex md:flex-col md:items-center">
       <article class="px-5 max-w-lg">
         <div>
           <div>
-            <img src={heroImage} alt={altHeroImage} />
+            <img
+              src={heroImage}
+              alt={altHeroImage}
+              class="border-2 border-stone-800 rounded-md"
+            />
           </div>
           <h1
             class="font-bold text-[1.5rem] md:text-[2rem] leading-none md:text-center mt-5"
