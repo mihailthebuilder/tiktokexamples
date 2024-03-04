@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Newsletter from "../../layouts/Newsletter.astro";
+
+export async function getStaticPaths() {
+  const emails = await getCollection("newsletter");
+  return emails.map((email) => ({
+    params: { slug: email.slug },
+    props: email,
+  }));
+}
+type Props = CollectionEntry<"newsletter">;
+
+const email = Astro.props;
+
+const { Content } = await email.render();
+---
+
+<Newsletter {...email.data}>
+  <div class="email-content">
+    <Content />
+  </div>
+</Newsletter>

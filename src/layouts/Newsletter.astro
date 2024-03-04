@@ -1,0 +1,32 @@
+---
+import type { CollectionEntry } from "astro:content";
+import "../styles/newsletter.css";
+
+type Props = CollectionEntry<"newsletter">["data"];
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+  </head>
+  <body class="email-body">
+    <div class="email-container">
+      <header>
+        <a href={Astro.site}>
+          <img src="/newsletter/logo.png" />
+        </a>
+        <h1>{title}</h1>
+      </header>
+      <main>
+        <slot />
+      </main>
+      <footer>
+        <div><a href="{{RewardsURL}}">Powered by EmailOctopus</a></div>
+        <input value="{{SenderInfoLine}}" disabled />
+      </footer>
+    </div>
+  </body>
+</html>
