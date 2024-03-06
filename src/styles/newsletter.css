@@ -9,14 +9,13 @@
   background-color: #fff;
 }
 
-header a {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+header {
+  text-align: center;
 }
 
 header img {
   max-width: 300px;
+  display: inline;
 }
 
 header h1 {
