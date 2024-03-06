@@ -8,8 +8,11 @@
   padding: 20px;
   background-color: #fff;
 }
-header {
-  text-align: center;
+
+header a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 header img {
