@@ -16,7 +16,10 @@ const { title } = Astro.props;
     <div class="email-container">
       <header>
         <a href={Astro.site}>
-          <img src="/newsletter/logo.png" alt="TikTok Examples" />
+          <img
+            src="https://tiktokexamples.com/newsletter/logo.png"
+            alt="TikTok Examples"
+          />
         </a>
         <h1>{title}</h1>
       </header>
@@ -25,7 +28,10 @@ const { title } = Astro.props;
       </main>
       <footer>
         <div><a href="RewardsURL">Powered by EmailOctopus</a></div>
-        SenderInfoLine
+        <div>SenderInfoLine</div>
+        <div>
+          <a href="UnsubscribeURL">Unsubscribe</a>
+        </div>
       </footer>
     </div>
   </body>
