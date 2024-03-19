@@ -46,7 +46,7 @@ ul {
 }
 
 li {
-  list-style-type: georgian;
+  list-style-type: upper-roman;
   margin-bottom: 0.75rem;
   padding-left: 0;
   margin-left: 0;
