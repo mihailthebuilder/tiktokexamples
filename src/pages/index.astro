@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
+import SubscribeForm from "../components/SubscribeForm.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -64,6 +65,48 @@ const posts = (await getCollection("blog")).sort(
             data-form="05ea1b56-d0ba-11ee-9094-2f97f7a66a9d"></script>
         </div>
       </section>
+
+      <div
+        id="modelConfirm"
+        class="fixed z-50 inset-0 bg-gray-900 bg-opacity-60 overflow-y-auto h-full w-full px-4"
+      >
+        <div
+          class="relative top-20 mx-auto shadow-xl rounded-md bg-white max-w-md"
+        >
+          <div class="flex justify-end p-2">
+            <button
+              onclick="closeModal('modelConfirm')"
+              type="button"
+              class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center"
+            >
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="p-6 pt-0">
+            <div class="flex flex-col items-center">
+              <img src="/popup.webp" class="h-28" />
+            </div>
+
+            <h3 class="text-xl font-normal mt-5 mb-6">
+              Oi, you! Want to subscribe to my newsletter? I spend 4 hours every
+              week finding 3 awesome TikTok examples that you can read in 10
+              mins.
+            </h3>
+            <SubscribeForm />
+          </div>
+        </div>
+      </div>
     </main>
     <Footer />
   </body>
