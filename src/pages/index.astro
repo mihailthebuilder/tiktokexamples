@@ -4,7 +4,6 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import { getCollection } from "astro:content";
-import SubscribeForm from "../components/SubscribeForm.astro";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -98,12 +97,14 @@ const posts = (await getCollection("blog")).sort(
               <img src="/popup.webp" class="h-28" />
             </div>
 
-            <h3 class="text-xl font-normal mt-5 mb-6">
-              Oi, you! Want to subscribe to my newsletter? I spend 4 hours every
-              week finding 3 awesome TikTok examples that you can read in 10
-              mins.
+            <h3 class="text-[1.15rem] leading-tight mt-5 mb-6">
+              Oi, you! Check out my newsletter! I spend 4 hours every week
+              preparing 3 awesome content examples that you can read in 10 mins.
             </h3>
-            <SubscribeForm />
+            <script
+              async
+              src="https://eomail6.com/form/05ea1b56-d0ba-11ee-9094-2f97f7a66a9d.js"
+              data-form="05ea1b56-d0ba-11ee-9094-2f97f7a66a9d"></script>
           </div>
         </div>
       </div>
