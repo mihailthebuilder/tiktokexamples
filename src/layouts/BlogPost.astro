@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Popup from "../components/Popup.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -59,6 +60,8 @@ const { title, description, heroImage, altHeroImage } = Astro.props;
           src="https://eomail6.com/form/05ea1b56-d0ba-11ee-9094-2f97f7a66a9d.js"
           data-form="05ea1b56-d0ba-11ee-9094-2f97f7a66a9d"></script>
       </section>
+
+      <Popup />
     </main>
     <Footer />
   </body>
